@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calmna - We Care For You</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #f0f8ff; /* Light blue background */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: #008000; /* Green color matching logo */
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        .content {
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 {
+            color: #008000;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #008000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #006400;
+        }
+        footer {
+            background-color: #008000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="calmna-logo.png" alt="Calmna Logo" class="logo">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <div class="content">
+                <h1>Welcome to Calmna</h1>
+                <p>At Calmna, we believe in nurturing your mental wellbeing. Our compassionate team of experts is here to support you on your journey to a healthier, happier mind.</p>
+                <a href="#get-started" class="cta-button">Get Started</a>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Calmna. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
