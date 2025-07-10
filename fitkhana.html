@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FitKhana – Smart Meal Plans, Freshly Made & Delivered to You</title>
-  <!-- Google Fonts: Modern, Rounded Typography -->
+  <title>FitKhana – Healthy Recipe Recommender</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
@@ -21,9 +20,7 @@
       --shadow: 0 4px 24px rgba(255, 167, 38, 0.08);
       --radius: 1.5rem;
     }
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Nunito', 'Montserrat', Arial, sans-serif;
@@ -32,25 +29,20 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
-   header {
-  position: fixed; /* more appropriate than absolute for sticky headers */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999; /* higher for safety in stacking */
-  background-color: rgba(255, 245, 100, 0.23); /* slightly more visible */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* better shadow if --shadow not defined */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-    .logo {
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background-color: rgba(255, 245, 100, 0.23);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      justify-content: space-between;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
+    .logo { display: flex; align-items: center; gap: 0.5rem; }
     .logo img {
       height: 54px;
       width: 54px;
@@ -66,10 +58,7 @@
       letter-spacing: 1px;
       font-family: 'Montserrat', sans-serif;
     }
-    nav {
-      display: flex;
-      gap: 1.5rem;
-    }
+    nav { display: flex; gap: 1.5rem; }
     nav a {
       color: var(--black);
       text-decoration: none;
@@ -93,25 +82,26 @@
       background: linear-gradient(135deg, var(--yellow), var(--orange) 95%);
       position: relative;
       overflow: hidden;
+      padding-top: 180px;
+      background-image: url('Fitbg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      margin-top: 2rem;
-    }
+    .hero-content { position: relative; z-index: 2; margin-top: 2rem; }
     .hero h1 {
       font-size: 2.8rem;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      color: var(--deep-orange);
+      color: black;
       margin-bottom: 1rem;
       letter-spacing: 1px;
       text-shadow: 0 2px 12px rgba(255, 167, 38, 0.10);
     }
     .hero .slogan {
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: var(--leaf-green);
+      font-size: 2.0rem;
+      font-weight: 800;
+      color: rgb(255, 64, 0);
       margin-bottom: 2rem;
     }
     .hero .cta-group {
@@ -133,15 +123,11 @@
       transition: background 0.2s, transform 0.1s;
       outline: none;
     }
-    .btn.secondary {
-      background: var(--green);
-      color: var(--white);
-    }
+    .btn.secondary { background: var(--green); color: var(--white); }
     .btn:hover {
       transform: translateY(-2px) scale(1.03);
       filter: brightness(1.08);
     }
-    /* About Section */
     .section {
       padding: 4rem 0 2.5rem 0;
       background: var(--gray);
@@ -175,8 +161,8 @@
     }
     .about-img {
       flex: 1 1 320px;
-      min-width: 260px;
-      max-width: 350px;
+      min-width: 280px;
+      max-width: 450px;
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: 0 4px 24px rgba(34,197,94,0.10);
@@ -191,7 +177,6 @@
       object-fit: cover;
       filter: brightness(1.04) saturate(1.1);
     }
-    /* How It Works */
     .steps {
       display: flex;
       flex-wrap: wrap;
@@ -213,109 +198,117 @@
       transform: translateY(-6px) scale(1.04);
       box-shadow: 0 8px 32px rgba(255, 167, 38, 0.13);
     }
-    .step-icon {
-  font-size: 2rem; /* Slightly reduced for better card balance */
-  margin-bottom: 0.75rem; /* Tighter spacing */
-  color: var(--leaf-green);
-  display: flex; /* Ensures alignment control */
-  justify-content: center; /* Horizontally centers the icon */
-  align-items: center; /* Vertically centers the icon */
-  width: 3rem; /* Fixed width for consistency */
-  height: 3rem; /* Fixed height for uniformity */
-  background: rgba(0, 0, 0, 0.05); /* Optional: subtle background for visibility */
-  border-radius: 50%; /* Circular container (adjust if needed) */
-  padding: 0.5rem; /* Internal spacing */
-  box-sizing: border-box; /* Prevents padding from affecting dimensions */
-}
-    .step-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--deep-orange);
-      margin-bottom: 0.5rem;
+    .step-title { font-size: 1.15rem; font-weight: 700; color: var(--deep-orange); margin-bottom: 0.5rem; }
+    .step-desc { font-size: 1rem; color: #444; line-height: 1.5; }
+    .recipe-finder {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: var(--radius);
+      max-width: 1000px;
+      margin: 2rem auto;
+      box-shadow: var(--shadow);
     }
-    .step-desc {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.5;
-    }
-    /* Meal Plans */
-    .plans {
+    .filters {
       display: flex;
       flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .filter-group { flex: 1; min-width: 200px; }
+    .filter-group h3 { margin-bottom: 0.5rem; color: var(--deep-orange); }
+    .filter-options { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .filter-btn {
+      background: var(--gray);
+      border: none;
+      border-radius: 1rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover { background: var(--yellow-orange); color: white; }
+    .filter-btn.active { background: var(--green); color: white; }
+    .recipes-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 2rem;
-      justify-content: center;
-      margin-top: 2.5rem;
+      margin-top: 2rem;
     }
-    .plan-card {
-      background: var(--white);
+    .recipe-card {
+      background: white;
       border-radius: var(--radius);
+      overflow: hidden;
       box-shadow: var(--shadow);
-      padding: 2rem 1.2rem;
-      flex: 1 1 260px;
-      max-width: 320px;
-      text-align: center;
-      transition: transform 0.18s;
-      border: 2px solid var(--yellow-orange);
-      position: relative;
+      transition: transform 0.2s;
     }
-    .plan-card:hover {
-      transform: translateY(-6px) scale(1.04);
-      box-shadow: 0 8px 32px rgba(255, 167, 38, 0.13);
-      border-color: var(--deep-orange);
+    .recipe-card:hover { transform: translateY(-5px); }
+    .recipe-img { width: 100%; height: 180px; object-fit: cover; }
+    .recipe-content { padding: 1.5rem; }
+    .recipe-title { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--deep-orange); }
+    .recipe-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      color: #666;
+      font-size: 0.9rem;
     }
-    .plan-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--deep-orange);
-      margin-bottom: 0.5rem;
+    .recipe-desc { color: #444; margin-bottom: 1rem; line-height: 1.5; }
+    .view-recipe {
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: 1rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
     }
-    .plan-price {
-      font-size: 1.1rem;
-      color: var(--green);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .plan-benefits {
-      font-size: 1rem;
-      color: #444;
-      margin-bottom: 0.8rem;
-      list-style: none;
-      padding: 0;
-    }
-    .plan-benefits li {
-      margin-bottom: 0.3rem;
-      text-align: left;
-      padding-left: 1.1rem;
-      position: relative;
-    }
-    .plan-benefits li:before {
-      content: '✔';
-      color: var(--leaf-green);
-      position: absolute;
+    .view-recipe:hover { background: var(--deep-orange); }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
       left: 0;
-      font-size: 1rem;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 1000;
+      overflow-y: auto;
     }
-    .plan-sample {
-      font-size: 0.98rem;
-      color: var(--orange);
+    .modal-content {
+      background: white;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: var(--radius);
+      max-width: 800px;
+      position: relative;
+    }
+    .close-modal {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--deep-orange);
+    }
+    .modal-recipe-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: var(--radius);
       margin-bottom: 1rem;
     }
-    .plan-btn {
-      margin-top: 0.5rem;
-      background: var(--green);
-      color: var(--white);
-      border: none;
-      border-radius: 2rem;
-      padding: 0.6rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.18s;
+    .recipe-details { display: flex; gap: 2rem; margin-bottom: 1.5rem; }
+    .recipe-info { flex: 1; }
+    .recipe-ingredients {
+      flex: 1;
+      background: var(--gray);
+      padding: 1rem;
+      border-radius: var(--radius);
     }
-    .plan-btn:hover {
-      background: var(--deep-orange);
-    }
-    /* Why Choose */
+    .recipe-ingredients h3, .recipe-steps h3 { color: var(--deep-orange); margin-bottom: 0.5rem; }
+    .recipe-ingredients ul { padding-left: 1.2rem; }
+    .recipe-ingredients li { margin-bottom: 0.3rem; }
+    .recipe-steps ol { padding-left: 1.2rem; }
+    .recipe-steps li { margin-bottom: 0.5rem; line-height: 1.5; }
     .why-list {
       display: flex;
       flex-wrap: wrap;
@@ -337,22 +330,9 @@
       transform: translateY(-4px) scale(1.03);
       box-shadow: 0 6px 24px rgba(34,197,94,0.13);
     }
-    .why-icon {
-      font-size: 2rem;
-      color: var(--leaf-green);
-      margin-bottom: 0.6rem;
-    }
-    .why-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--deep-orange);
-      margin-bottom: 0.3rem;
-    }
-    .why-desc {
-      font-size: 0.98rem;
-      color: #444;
-    }
-    /* Testimonials */
+    .why-icon { font-size: 2rem; color:rgb(3, 74, 4); margin-bottom: 0.6rem; }
+    .why-title { font-size: 1.1rem; font-weight: 700; color: var(--deep-orange); margin-bottom: 0.3rem; }
+    .why-desc { font-size: 0.98rem; color: #444; }
     .testimonials {
       display: flex;
       flex-wrap: wrap;
@@ -375,96 +355,207 @@
       transform: scale(1.03);
       box-shadow: 0 8px 32px rgba(34,197,94,0.13);
     }
-  .icon {
-  font-size: 24px;   
-  color: #333;       
-  margin-right: 8px; 
-  vertical-align: middle;
-} 
-    .testimonial-name {
-      font-weight: 700;
-      color: var(--deep-orange);
-      margin-bottom: 0.2rem;
-    }
-    .testimonial-review {
-      font-size: 1rem;
-      color: #444;
-      font-style: italic;
-    footer {
+    .icon { font-size: 24px; color: #04470a; margin-right: 8px; vertical-align: middle; }
+    .testimonial-name { font-weight: 700; color: var(--deep-orange); margin-bottom: 0.2rem; }
+    .testimonial-review { font-size: 1rem; color: #444; font-style: italic; }
+    .footer {
       background: var(--yellow-orange);
       color: var(--black);
-      text-align: center;
-      padding: 2rem 1rem 1rem 1rem;
       border-radius: 2rem 2rem 0 0;
       margin-top: 2rem;
-      box-shadow: 0 -2px 16px rgba(255, 167, 38, 0.08);
+      box-shadow: 0 -2px 16px rgba(3, 100, 45, 0.116);
+      font-family: inherit;
+      padding: 2.5rem 1.5rem 1rem;
     }
-    .footer-links, .footer-social {
+    .footer-main {
       display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      margin-bottom: 1rem;
       flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2.5rem;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    .footer-links a, .footer-social a {
+    .footer-section { flex: 1 1 180px; min-width: 160px; margin-bottom: 1.2rem; }
+    .footer-brand { text-align: left; }
+    .footer-logo { height: 48px; margin-bottom: 0.5rem; }
+    .footer-tagline { font-size: 1.05rem; color: #444; margin: 0; }
+    .footer-links, .footer-social, .footer-contact, .footer-apps {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .footer-links a, .footer-social a, .footer-contact a {
       color: var(--black);
       text-decoration: none;
       font-weight: 600;
-      font-size: 1rem;
-      border-radius: 1rem;
-      padding: 0.4rem 0.7rem;
-      transition: background 0.2s;
+      font-size: 1.1rem;
+      border-radius: 0.7rem;
+      padding: 0.4rem 0.8rem;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
     }
-    .footer-links a:hover, .footer-social a:hover {
+    .footer-links a:hover, .footer-social a:hover, .footer-contact a:hover {
       background: var(--green);
       color: var(--white);
+      transform: translateY(-2px) scale(1.04);
     }
-    .footer-contact {
-      font-size: 1rem;
-      margin-bottom: 0.8rem;
+    .footer-social a span, .footer-contact a span {
+      margin-right: 0.5em;
+      font-size: 1.2em;
+      vertical-align: middle;
     }
     .footer-apps {
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
       margin-top: 0.5rem;
     }
     .footer-apps img {
       height: 38px;
-      margin: 0 0.5rem;
       border-radius: 0.6rem;
-      box-shadow: 0 2px 8px rgba(34,197,94,0.10);
+      box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1);
       background: var(--white);
+      transition: transform 0.2s;
     }
-    .footer-copy {
-      font-size: 0.92rem;
+    .footer-apps img:hover { transform: scale(1.09); }
+    .footer-bottom {
+      border-top: 1px solid #f3e7d4;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      font-size: 0.95rem;
       color: #444;
-      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
     }
-    /* Responsive */
+    .footer-policy-links a {
+      color: #444;
+      text-decoration: underline;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .footer-policy-links a:hover { color: var(--green); }
+    .auth-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 1000;
+    }
+    .auth-content {
+      background: white;
+      margin: 5% auto;
+      padding: 2rem;
+      border-radius: var(--radius);
+      max-width: 400px;
+      position: relative;
+    }
+    .auth-tabs { display: flex; margin-bottom: 1.5rem; }
+    .auth-tab {
+      flex: 1;
+      text-align: center;
+      padding: 0.5rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+    .auth-tab.active { border-bottom: 2px solid var(--deep-orange); font-weight: bold; }
+    .auth-form { display: none; }
+    .auth-form.active { display: block; }
+    .auth-form input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: var(--radius);
+    }
+    .auth-form button {
+      width: 100%;
+      padding: 0.8rem;
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+    .auth-form button:hover { background: var(--deep-orange); }
+    .subscription-cta {
+      background: var(--yellow-orange);
+      padding: 2rem;
+      border-radius: var(--radius);
+      text-align: center;
+      margin: 2rem auto;
+      max-width: 800px;
+    }
+    .subscription-cta h2 { color: var(--deep-orange); margin-bottom: 1rem; }
+    .subscription-cta p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+    .cta-btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: var(--deep-orange); }
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--deep-orange);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .benefit-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .benefit-icon { font-size: 2rem; color: var(--deep-orange); margin-bottom: 1rem; }
+    @media (max-width: 900px) {
+      .footer-main { flex-direction: column; align-items: center; gap: 1.5rem; }
+      .footer-section { min-width: 0; width: 100%; text-align: center; }
+      .footer-brand { text-align: center; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
     @media (max-width: 950px) {
-      .about-content, .steps, .plans, .why-list, .testimonials {
-        flex-direction: column;
-        align-items: stretch;
-      }
+      .about-content, .steps, .plans, .why-list, .testimonials { flex-direction: column; align-items: stretch; }
       .about-img { margin-bottom: 1.5rem; }
-    }
-    @media (max-width: 700px) {
-      .section, .join-tribe, footer {
-        border-radius: 1rem;
-        padding: 2rem 0.5rem;
-      }
-      header { padding: 0.5rem 1rem; }
-      .hero h1 { font-size: 2rem; }
-      .section-title { font-size: 1.5rem; }
+      .recipe-details { flex-direction: column; }
     }
     @media (max-width: 500px) {
       .hero h1 { font-size: 1.35rem; }
       .brand { font-size: 1.2rem; }
       nav { gap: 0.5rem; }
       .btn, .btn.secondary { font-size: 0.95rem; padding: 0.65rem 1.2rem; }
+      .modal-content { margin: 1rem; padding: 1rem; }
     }
   </style>
 </head>
 <body>
-  <!-- Sticky Navigation -->
   <header>
     <div class="logo">
       <img src="FK.png" alt="FitKhana Logo">
@@ -472,224 +563,565 @@
     </div>
     <nav>
       <a href="#about">About</a>
-      <a href="#how">How It Works</a>
-      <a href="#plans">Meal Plans</a>
+      <a href="#recipes">Find Recipes</a>
       <a href="#why">Why Us</a>
       <a href="#testimonials">Testimonials</a>
     </nav>
-  </header>
-
- <section class="hero" style="background-image: url('fit bg.png'); padding-top:180px; background-size: cover; background-position: center; background-repeat: no-repeat;">
-  <div class="hero-content">
-    <h1>Smart Meal Plans, Freshly Made & Delivered to You</h1>
-    <div class="slogan">Your Health, Our Mission</div>
-    <div class="cta-group">
-      <a href="#join" class="btn">Get Started</a>
-      <a href="#plans" class="btn secondary">See Plans</a>
+    <div class="user-profile" id="user-profile">
+      <div class="user-avatar" id="user-avatar">?</div>
+      <span id="username-display">Guest</span>
     </div>
-  </div>
-</section>
-
-  <!-- About FitKhana -->
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover Healthy Recipes Tailored For You</h1>
+      <div class="slogan">Your Health, Our Mission</div>
+      <div class="cta-group">
+        <a href="#recipes" class="btn">Find Recipes</a>
+        <a href="#about" class="btn secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
   <section class="section" id="about">
     <h2 class="section-title">About FitKhana</h2>
-    <h3 class="section-title">Smart Meal Plans, Freshly Made & Delivered to You</h3>
+    <h3 class="section-title">Your Personal Healthy Recipe Finder</h3>
     <div class="about-content">
       <div class="about-text">
-<p><b>At FITKHANA</b>, we make healthy eating simple, personalized, and effortless. Built for fitness enthusiasts, busy professionals, and anyone who cares about what they eat, FITKHANA takes the guesswork out of nutrition by delivering smart, homemade meals right to your door.
-
-We believe that eating well shouldn’t mean spending hours in the kitchen or settling for bland, repetitive food. That’s why every <b>FITKHANA meal</b> is crafted by expert chefs and approved by certified nutritionists—designed to fuel your body and fit your goals.
-</p>
+        <p><b>At FITKHANA</b>, we make healthy eating simple and personalized. Our smart recipe recommender helps you find the perfect meals based on your dietary preferences, available ingredients, and time constraints—all without the hassle of meal delivery services.</p>
+        <p>We believe that eating well shouldn't be complicated. That's why every <b>FITKHANA recipe</b> is carefully selected to meet nutritional standards while being delicious and easy to prepare. Whether you're vegan, gluten-free, or just looking for quick healthy meals, we've got you covered.</p>
       </div>
       <div class="about-img">
-        <!-- Replace with real food photo if available -->
         <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Healthy Homemade Food">
       </div>
     </div>
   </section>
-
-  <!-- How It Works -->
-  <section class="section" id="how" style="background: var(--white);">
-  <h2 class="section-title">How It Works</h2>
-  <div class="steps">
-    <div class="step-card">
-      <div class="step-icon">
-        <i class="fi fi-tr-goals" aria-hidden="true"></i>
+  <section class="section" id="recipes" style="background: white;">
+    <h2 class="section-title">Find Your Perfect Recipe</h2>
+    <div class="recipe-finder">
+      <div class="filters">
+        <div class="filter-group">
+          <h3>Diet Type</h3>
+          <div class="filter-options">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
+            <button class="filter-btn" data-filter="vegan">Vegan</button>
+            <button class="filter-btn" data-filter="low-carb">Low-Carb</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <h3>Meal Type</h3>
+          <div class="filter-options">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+            <button class="filter-btn" data-filter="lunch">Lunch</button>
+            <button class="filter-btn" data-filter="dinner">Dinner</button>
+            <button class="filter-btn" data-filter="snack">Snack</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <h3>Cooking Time</h3>
+          <div class="filter-options">
+            <button class="filter-btn active" data-filter="all">Any</button>
+            <button class="filter-btn" data-filter="quick">&lt;30 mins</button>
+            <button class="filter-btn" data-filter="medium">30-60 mins</button>
+          </div>
+        </div>
       </div>
-      <div class="step-title">Choose Your Goal</div>
-      <div class="step-desc">
-        Select from Weight Loss, Muscle Gain, Balanced Diet, or Diabetic-Friendly plans to match your health journey.
-      </div>
+      <div class="recipes-container" id="recipes-container"></div>
     </div>
-    <div class="step-card">
-      <div class="icon">
-        <i class="fi fi-tr-salad" aria-hidden="true"></i>
+  </section>
+  <div class="modal" id="recipe-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img src="" alt="Recipe Image" class="modal-recipe-img" id="modal-recipe-img">
+      <h2 id="modal-recipe-title"></h2>
+      <div class="recipe-details">
+        <div class="recipe-info">
+          <div class="recipe-meta">
+            <span id="modal-recipe-time"></span>
+            <span id="modal-recipe-calories"></span>
+            <span id="modal-recipe-type"></span>
+          </div>
+          <p id="modal-recipe-desc"></p>
+        </div>
+        <div class="recipe-ingredients">
+          <h3>Ingredients</h3>
+          <ul id="modal-recipe-ingredients"></ul>
+        </div>
       </div>
-      <div class="step-title">We Cook Fresh</div>
-      <div class="step-desc">
-        Our certified cooks prepare meals daily using local, seasonal, and nutritionist-approved ingredients.
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="icon">
-                
-      </div>
-      <div class="step-title">Delivered to Your Door</div>
-      <div class="step-desc">
-        Enjoy freshly made, healthy meals delivered right to your doorstep, on your schedule.
+      <div class="recipe-steps">
+        <h3>Preparation Steps</h3>
+        <ol id="modal-recipe-steps"></ol>
       </div>
     </div>
   </div>
-</section>
-  <!-- Meal Plans -->
-  <section class="section" id="plans">
-    <h2 class="section-title">Meal Plans</h2>
-    <div class="plans">
-      <div class="plan-card">
-        <div class="plan-title">Weight Loss</div>
-        <div class="plan-price">₹199/day</div>
-        <ul class="plan-benefits">
-          <li>Low-calorie, high-fiber meals</li>
-          <li>Portion controlled</li>
-          <li>Weekly nutritionist check-ins</li>
-        </ul>
-        <div class="plan-sample">Sample: Quinoa salad, Grilled veggies, Fruit bowl</div>
-        <button class="plan-btn">Select Plan</button>
-      </div>
-      <div class="plan-card">
-        <div class="plan-title">Muscle Gain</div>
-        <div class="plan-price">₹249/day</div>
-        <ul class="plan-benefits">
-          <li>High-protein, balanced carbs</li>
-          <li>Post-workout snacks</li>
-          <li>Personalized macros</li>
-        </ul>
-        <div class="plan-sample">Sample: Paneer tikka, Brown rice, Protein smoothie</div>
-        <button class="plan-btn">Select Plan</button>
-      </div>
-      <div class="plan-card">
-        <div class="plan-title">Balanced Diet</div>
-        <div class="plan-price">₹179/day</div>
-        <ul class="plan-benefits">
-          <li>Wholesome, home-style meals</li>
-          <li>Seasonal veggies & grains</li>
-          <li>Perfect for families & students</li>
-        </ul>
-        <div class="plan-sample">Sample: Dal, Roti, Mixed sabzi, Salad,bananas , choco powder  </div>
-        <button class="plan-btn">Select Plan</button>
-      </div>
-      <div class="plan-card">
-        <div class="plan-title">Diabetic-Friendly</div>
-        <div class="plan-price">₹229/day</div>
-        <ul class="plan-benefits">
-          <li>Low-GI, sugar-free meals</li>
-          <li>Expert dietitian support</li>
-          <li>Safe, tasty, and filling</li>
-        </ul>
-        <div class="plan-sample">Sample: Millet upma, Stir-fried greens, Yogurt</div>
-        <button class="plan-btn">Select Plan</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose FitKhana -->
   <section class="section" id="why" style="background: var(--white);">
     <h2 class="section-title">Why Choose FitKhana?</h2>
     <div class="why-list">
       <div class="why-card">
-        <div class="why-icon"><i class="fas fa-user chef-icon"></i>
-</div>
-        <div class="why-title">Homemade by Certified Cooks</div>
-        <div class="why-desc">Every meal is lovingly prepared in hygienic home kitchens by certified cooks.</div>
+        <div class="why-icon"><i class="fas fa-utensils"></i></div>
+        <div class="why-title">Personalized Recommendations</div>
+        <div class="why-desc">Get recipes tailored to your dietary needs and preferences.</div>
       </div>
       <div class="why-card">
-        <div class="why-icon"></div>
+        <div class="why-icon"><i class="fas fa-clipboard-check"></i></div>
         <div class="why-title">Nutritionist-Approved</div>
-        <div class="why-desc">Our meal plans are crafted and reviewed by expert nutritionists for balanced nutrition.</div>
+        <div class="why-desc">All recipes meet nutritional standards for balanced meals.</div>
       </div>
       <div class="why-card">
-        <div class="why-icon"></div>
-        <div class="why-title">Flexible Subscriptions</div>
-        <div class="why-desc">Pause, skip, or change your plan anytime. No lock-ins, just healthy freedom!</div>
+        <div class="why-icon"><i class="fas fa-clock"></i></div>
+        <div class="why-title">Quick & Easy</div>
+        <div class="why-desc">Find recipes that fit your schedule and cooking skills.</div>
       </div>
       <div class="why-card">
-        <div class="why-icon"></div>
-        <div class="why-title">Local, Fresh Ingredients</div>
-        <div class="why-desc">We source ingredients from local farms for maximum freshness and nutrition.</div>
+        <div class="why-icon"><i class="fas fa-leaf"></i></div>
+        <div class="why-title">Variety of Options</div>
+        <div class="why-desc">Discover new healthy recipes to keep your meals exciting.</div>
       </div>
     </div>
   </section>
-
- <!-- Testimonials -->
-<section class="section" id="testimonials">
-  <h2 class="section-title">Customer Testimonials</h2>
-  <div class="testimonials">
-    <div class="testimonial-card">
-      <i class="fas fa-user unknown-user-icon"></i>
-      <div class="testimonial-name">Roshan Shaw </div>
-      <div class="testimonial-review">“FitKhana has made my weight loss journey enjoyable. The meals are delicious, satisfying, and never feel like a diet—so easy to stick to!”</div>
+  <section class="section" id="testimonials">
+    <h2 class="section-title">User Testimonials</h2>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <i class="fas fa-user unknown-user-icon"></i>
+        <div class="testimonial-name">Roshan Shaw</div>
+        <div class="testimonial-review">"FitKhana has transformed my meal planning. I've discovered so many delicious healthy recipes I never would have tried otherwise!"</div>
+      </div>
+      <div class="testimonial-card">
+        <i class="fas fa-user unknown-user-icon"></i>
+        <div class="testimonial-name">Yash Sharma</div>
+        <div class="testimonial-review">"As a vegan, finding good recipes was hard. FitKhana's filters make it so easy to find meals I can actually make and enjoy."</div>
+      </div>
+      <div class="testimonial-card">
+        <i class="fas fa-user unknown-user-icon"></i>
+        <div class="testimonial-name">Rahul Kumar</div>
+        <div class="testimonial-review">"The quick meal options save me so much time. I can find healthy recipes I can actually make after work."</div>
+      </div>
+      <div class="testimonial-card">
+        <i class="fas fa-user unknown-user-icon"></i>
+        <div class="testimonial-name">Yukti Sharma</div>
+        <div class="testimonial-review">"I've lost 8kg using FitKhana's low-carb recipes. The nutritional info helps me stay on track with my goals."</div>
+      </div>
     </div>
-    <div class="testimonial-card">
-      <i class="fas fa-user unknown-user-icon"></i>
-      <div class="testimonial-name">Yash Sharma</div>
-      <div class="testimonial-review">“FitKhana didn’t just change the way I eat—it changed the way I feel about myself. With every meal tailored to my goals, I feel healthier, more energized, and more confident in my own skin. It’s like having a personal nutritionist and chef by my side every day.”</div>
+  </section>
+  <section class="subscription-cta">
+    <h2>Get Weekly Healthy Recipes Delivered to Your Inbox!</h2>
+    <p>Subscribe to our premium service and receive curated healthy recipes every week based on your preferences and dietary needs.</p>
+    <button class="cta-btn" id="subscribe-btn">Subscribe Now</button>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-calendar-alt"></i></div>
+        <h3>Weekly Meal Plans</h3>
+        <p>Get complete meal plans with shopping lists for the week</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-utensils"></i></div>
+        <h3>Exclusive Recipes</h3>
+        <p>Access to premium recipes not available to free users</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-user-md"></i></div>
+        <h3>Nutritionist Support</h3>
+        <p>Get answers to your nutrition questions from experts</p>
+      </div>
     </div>
-    <div class="testimonial-card">
-      <i class="fas fa-user unknown-user-icon"></i>
-      <div class="testimonial-name">Rahul Kumar</div>
-      <div class="testimonial-review">“As a busy professional in Patna, I really appreciate the convenience and quality of FitKhana. The muscle gain plan has really helped me see results!”</div>
-    </div>
-    <div class="testimonial-card">
-      <i class="fas fa-user unknown-user-icon"></i>
-      <div class="testimonial-name">Yukti Sharma</div>
-      <div class="testimonial-review">“Since starting FitKhana’s diabetic-friendly plan, my sugar levels have improved and I feel much healthier. Highly recommended for Indian families!”</div>
+  </section>
+  <div class="auth-modal" id="auth-modal">
+    <div class="auth-content">
+      <span class="close-modal">&times;</span>
+      <div class="auth-tabs">
+        <div class="auth-tab active" data-tab="login">Login</div>
+        <div class="auth-tab" data-tab="signup">Sign Up</div>
+      </div>
+      <form class="auth-form active" id="login-form">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <form class="auth-form" id="signup-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
     </div>
   </div>
-</section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-links">
-      <a href="#">Home</a>
-      <a href="#plans">Meal Plans</a>
-      <a href="#faq">FAQs</a>
-      <a href="#contact">Contact</a>
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-section footer-brand">
+        <img src="FK.png" alt="FitKhana Logo" class="footer-logo">
+        <p class="footer-tagline">Your healthy journey starts here.</p>
+      </div>
+      <div class="footer-section footer-links">
+        <a href="#about">About</a>
+        <a href="#recipes">Find Recipes</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#testimonials">Testimonials</a>
+      </div>
+      <div class="footer-section footer-contact">
+        <a href="mailto:hello@fitkhana.com"><span class="icon-mail"></span> hello@fitkhana.com</a>
+        <a href="tel:+919999999999"><span class="icon-phone"></span> +91 99999 99999</a>
+      </div>
+      <div class="footer-section footer-social">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
     </div>
-    <div class="footer-social">
-      <a href="#" title="Instagram"></a>
-      <a href="#" title="Facebook">📘</a>
-      <a href="#" title="WhatsApp">💬</a>
-    </div>
-    <div class="footer-contact">
-      <span>Email: <a href="mailto:hello@fitkhana.com">hello@fitkhana.com</a></span> |
-      <span>Phone: <a href="tel:+919999999999">+91 99999 99999</a></span>
-    </div>
-    <div class="footer-apps">
-      <!-- Placeholder for app download badges -->
-      <img src="image.png" alt="Google Play" height="38">
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" height="38">
-    </div>
-    <div class="footer-copy">
-      &copy; 2025 FitKhana. All rights reserved.
+    <div class="footer-bottom">
+      <span>&copy; 2025 FitKhana. All rights reserved.</span>
+      <div class="footer-policy-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
     </div>
   </footer>
-
-  <!-- Lightweight Animations & JS -->
   <script>
-    // Join Tribe email capture (demo only)
-    function joinTribe() {
-      var email = document.getElementById('email').value;
-      var msg = document.getElementById('join-msg');
-      if(email && email.includes('@')) {
-        msg.innerHTML = "Thank you for joining the FitKhana Tribe!";
-        document.getElementById('email').value = '';
-      } else {
-        msg.innerHTML = "Please enter a valid email address.";
+    const recipes = [
+      {
+        id: 1,
+        title: "Quinoa Salad Bowl",
+        image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+        time: "25 mins",
+        calories: "420 kcal",
+        type: "Lunch",
+        diet: ["vegetarian", "vegan"],
+        description: "A refreshing and protein-packed quinoa salad with fresh vegetables and a lemon-tahini dressing.",
+        ingredients: [
+          "1 cup quinoa, rinsed",
+          "2 cups water",
+          "1 cucumber, diced",
+          "1 red bell pepper, diced",
+          "1/2 red onion, finely chopped",
+          "1/4 cup chopped parsley",
+          "2 tbsp tahini",
+          "1 lemon, juiced",
+          "1 clove garlic, minced",
+          "Salt and pepper to taste"
+        ],
+        steps: [
+          "Cook quinoa in water according to package instructions. Let cool.",
+          "In a large bowl, combine cooked quinoa with cucumber, bell pepper, red onion, and parsley.",
+          "In a small bowl, whisk together tahini, lemon juice, garlic, salt, and pepper.",
+          "Pour dressing over salad and toss to combine.",
+          "Serve chilled or at room temperature."
+        ]
+      },
+      {
+        id: 2,
+        title: "Avocado Toast with Egg",
+        image: "https://images.unsplash.com/photo-1525351326368-efbb5cb6814d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+        time: "15 mins",
+        calories: "320 kcal",
+        type: "Breakfast",
+        diet: ["vegetarian"],
+        description: "Simple, satisfying avocado toast topped with a perfectly cooked egg for protein.",
+        ingredients: [
+          "2 slices whole grain bread",
+          "1 ripe avocado",
+          "2 eggs",
+          "1/2 tsp red pepper flakes",
+          "Salt and pepper to taste",
+          "1 tbsp olive oil"
+        ],
+        steps: [
+          "Toast bread until golden and crisp.",
+          "Mash avocado and spread evenly on toast. Season with salt, pepper, and red pepper flakes.",
+          "Heat olive oil in a pan over medium heat. Crack eggs into pan and cook to desired doneness.",
+          "Place cooked eggs on top of avocado toast.",
+          "Serve immediately."
+        ]
+      },
+      {
+        id: 3,
+        title: "Grilled Chicken with Roasted Vegetables",
+        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+        time: "40 mins",
+        calories: "450 kcal",
+        type: "Dinner",
+        diet: ["low-carb"],
+        description: "Juicy grilled chicken served with a medley of roasted seasonal vegetables.",
+        ingredients: [
+          "2 chicken breasts",
+          "1 zucchini, sliced",
+          "1 red bell pepper, sliced",
+          "1 cup cherry tomatoes",
+          "1 red onion, sliced",
+          "2 tbsp olive oil",
+          "1 tsp dried oregano",
+          "Salt and pepper to taste"
+        ],
+        steps: [
+          "Preheat oven to 400°F (200°C).",
+          "Toss vegetables with 1 tbsp olive oil, oregano, salt, and pepper. Spread on baking sheet.",
+          "Roast vegetables for 25-30 minutes until tender and slightly caramelized.",
+          "Meanwhile, season chicken with salt and pepper. Heat remaining oil in grill pan over medium-high heat.",
+          "Grill chicken for 6-7 minutes per side until cooked through.",
+          "Serve chicken with roasted vegetables."
+        ]
+      },
+      {
+        id: 4,
+        title: "Berry Smoothie Bowl",
+        image: "https://images.unsplash.com/photo-1505252585461-04db1a846aaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+        time: "10 mins",
+        calories: "280 kcal",
+        type: "Breakfast",
+        diet: ["vegetarian", "vegan"],
+        description: "A thick, creamy smoothie bowl packed with antioxidants and topped with crunchy granola.",
+        ingredients: [
+          "1 frozen banana",
+          "1 cup mixed berries (strawberries, blueberries, raspberries)",
+          "1/2 cup almond milk",
+          "1 tbsp chia seeds",
+          "1/4 cup granola",
+          "1 tbsp almond butter",
+          "Fresh berries for topping"
+        ],
+        steps: [
+          "In a blender, combine frozen banana, mixed berries, almond milk, and chia seeds. Blend until smooth and thick.",
+          "Pour into a bowl and top with granola, almond butter, and fresh berries.",
+          "Serve immediately."
+        ]
+      },
+      {
+        id: 5,
+        title: "Vegetable Stir Fry with Tofu",
+        image: "https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+        time: "30 mins",
+        calories: "380 kcal",
+        type: "Dinner",
+        diet: ["vegetarian", "vegan"],
+        description: "Quick and flavorful stir fry packed with colorful vegetables and protein-rich tofu.",
+        ingredients: [
+          "1 block firm tofu, pressed and cubed",
+          "2 cups mixed vegetables (broccoli, bell peppers, carrots, snap peas)",
+          "2 cloves garlic, minced",
+          "1 tbsp ginger, grated",
+          "2 tbsp soy sauce",
+          "1 tbsp sesame oil",
+          "1 tsp honey or maple syrup",
+          "1/2 tsp red pepper flakes",
+          "2 tbsp vegetable oil",
+          "Cooked brown rice for serving"
+        ],
+        steps: [
+          "Heat 1 tbsp vegetable oil in a large pan or wok over medium-high heat. Add tofu and cook until golden on all sides. Remove and set aside.",
+          "Add remaining oil to pan. Add garlic and ginger, stir for 30 seconds until fragrant.",
+          "Add vegetables and stir fry for 5-6 minutes until crisp-tender.",
+          "Return tofu to pan. Add soy sauce, sesame oil, honey, and red pepper flakes. Toss to combine.",
+          "Serve hot over brown rice."
+        ]
+      },
+      {
+        id: 6,
+        title: "Greek Yogurt Parfait",
+        image: "https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+        time: "5 mins",
+        calories: "250 kcal",
+        type: "Snack",
+        diet: ["vegetarian", "low-carb"],
+        description: "Layers of creamy Greek yogurt, fresh fruit, and crunchy nuts for a perfect snack.",
+        ingredients: [
+          "1 cup Greek yogurt",
+          "1/2 cup mixed berries",
+          "2 tbsp granola",
+          "1 tbsp honey",
+          "1 tbsp chopped nuts (almonds or walnuts)"
+        ],
+        steps: [
+          "In a glass or bowl, layer half the yogurt, then half the berries and granola.",
+          "Repeat layers with remaining ingredients.",
+          "Drizzle with honey and sprinkle with chopped nuts.",
+          "Serve immediately or refrigerate for up to 2 hours."
+        ]
       }
-      setTimeout(() => { msg.innerHTML = ""; }, 4000);
+    ];
+    const recipesContainer = document.getElementById('recipes-container');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const recipeModal = document.getElementById('recipe-modal');
+    const closeModal = document.querySelector('.close-modal');
+    function displayRecipes(recipesToDisplay) {
+      recipesContainer.innerHTML = '';
+      if (recipesToDisplay.length === 0) {
+        recipesContainer.innerHTML = '<p style="grid-column:1/-1;text-align:center;">No recipes match your filters. Try adjusting your criteria.</p>';
+        return;
+      }
+      recipesToDisplay.forEach(recipe => {
+        const recipeCard = document.createElement('div');
+        recipeCard.className = 'recipe-card';
+        recipeCard.innerHTML = `
+          <img src="${recipe.image}" alt="${recipe.title}" class="recipe-img">
+          <div class="recipe-content">
+            <h3 class="recipe-title">${recipe.title}</h3>
+            <div class="recipe-meta">
+              <span>${recipe.time}</span>
+              <span>${recipe.calories}</span>
+              <span>${recipe.type}</span>
+            </div>
+            <p class="recipe-desc">${recipe.description}</p>
+            <button class="view-recipe" data-id="${recipe.id}">View Recipe</button>
+          </div>
+        `;
+        recipesContainer.appendChild(recipeCard);
+      });
+      document.querySelectorAll('.view-recipe').forEach(button => {
+        button.addEventListener('click', () => {
+          const recipeId = parseInt(button.dataset.id);
+          const recipe = recipes.find(r => r.id === recipeId);
+          showRecipeModal(recipe);
+        });
+      });
     }
-
-    // Smooth scroll for nav links
+    function showRecipeModal(recipe) {
+      document.getElementById('modal-recipe-img').src = recipe.image;
+      document.getElementById('modal-recipe-img').alt = recipe.title;
+      document.getElementById('modal-recipe-title').textContent = recipe.title;
+      document.getElementById('modal-recipe-time').textContent = recipe.time;
+      document.getElementById('modal-recipe-calories').textContent = recipe.calories;
+      document.getElementById('modal-recipe-type').textContent = recipe.type;
+      document.getElementById('modal-recipe-desc').textContent = recipe.description;
+      const ingredientsList = document.getElementById('modal-recipe-ingredients');
+      ingredientsList.innerHTML = '';
+      recipe.ingredients.forEach(ingredient => {
+        const li = document.createElement('li');
+        li.textContent = ingredient;
+        ingredientsList.appendChild(li);
+      });
+      const stepsList = document.getElementById('modal-recipe-steps');
+      stepsList.innerHTML = '';
+      recipe.steps.forEach(step => {
+        const li = document.createElement('li');
+        li.textContent = step;
+        stepsList.appendChild(li);
+      });
+      recipeModal.style.display = 'block';
+    }
+    closeModal.addEventListener('click', () => {
+      recipeModal.style.display = 'none';
+    });
+    window.addEventListener('click', (e) => {
+      if (e.target === recipeModal) {
+        recipeModal.style.display = 'none';
+      }
+    });
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const group = button.parentElement.parentElement;
+        group.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const dietFilter = document.querySelector('.filter-group:nth-child(1) .filter-btn.active').dataset.filter;
+        const typeFilter = document.querySelector('.filter-group:nth-child(2) .filter-btn.active').dataset.filter;
+        const timeFilter = document.querySelector('.filter-group:nth-child(3) .filter-btn.active').dataset.filter;
+        let filteredRecipes = recipes.filter(recipe => {
+          if (dietFilter !== 'all' && !recipe.diet.includes(dietFilter)) return false;
+          if (typeFilter !== 'all' && !recipe.type.toLowerCase().includes(typeFilter)) return false;
+          if (timeFilter === 'quick' && parseInt(recipe.time) > 30) return false;
+          if (timeFilter === 'medium' && (parseInt(recipe.time) <= 30 || parseInt(recipe.time) > 60)) return false;
+          return true;
+        });
+        displayRecipes(filteredRecipes);
+      });
+    });
+    displayRecipes(recipes);
+    let currentUser = null;
+    const authModal = document.getElementById('auth-modal');
+    const loginForm = document.getElementById('login-form');
+    const signupForm = document.getElementById('signup-form');
+    const authTabs = document.querySelectorAll('.auth-tab');
+    const subscribeBtn = document.getElementById('subscribe-btn');
+    const userProfile = document.getElementById('user-profile');
+    const userAvatar = document.getElementById('user-avatar');
+    const usernameDisplay = document.getElementById('username-display');
+    userProfile.addEventListener('click', () => {
+      if (currentUser) {
+        alert(`Logged in as ${currentUser.name}\nSubscription: ${currentUser.isSubscribed ? 'Active' : 'Inactive'}`);
+      } else {
+        authModal.style.display = 'block';
+      }
+    });
+    subscribeBtn.addEventListener('click', () => {
+      if (!currentUser) {
+        authModal.style.display = 'block';
+        return;
+      }
+      if (currentUser.isSubscribed) {
+        alert('You are already subscribed!');
+        return;
+      }
+      const confirmSubscribe = confirm('Subscribe to weekly recipes for ₹199/month?');
+      if (confirmSubscribe) {
+        currentUser.isSubscribed = true;
+        updateUserDisplay();
+        subscribeBtn.textContent = 'Subscription Active';
+        subscribeBtn.style.backgroundColor = 'var(--deep-orange)';
+        alert('Thank you for subscribing! You will receive your first recipe pack soon.');
+      }
+    });
+    authTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        authTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.auth-form').forEach(form => {
+          form.classList.remove('active');
+        });
+        document.getElementById(`${tab.dataset.tab}-form`).classList.add('active');
+      });
+    });
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = e.target.elements[0].value;
+      const password = e.target.elements[1].value;
+      if (email && password) {
+        currentUser = {
+          name: email.split('@')[0],
+          email,
+          isSubscribed: false
+        };
+        updateUserDisplay();
+        authModal.style.display = 'none';
+      }
+    });
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = e.target.elements[0].value;
+      const email = e.target.elements[1].value;
+      const password = e.target.elements[2].value;
+      const confirmPassword = e.target.elements[3].value;
+      if (password !== confirmPassword) {
+        alert("Passwords don't match!");
+        return;
+      }
+      if (name && email && password) {
+        currentUser = {
+          name,
+          email,
+          isSubscribed: false
+        };
+        updateUserDisplay();
+        authModal.style.display = 'none';
+      }
+    });
+    function updateUserDisplay() {
+      if (currentUser) {
+        userAvatar.textContent = currentUser.name.charAt(0).toUpperCase();
+        usernameDisplay.textContent = currentUser.name;
+        if (currentUser.isSubscribed) {
+          subscribeBtn.textContent = 'Subscription Active';
+          subscribeBtn.style.backgroundColor = 'var(--deep-orange)';
+        }
+      } else {
+        userAvatar.textContent = '?';
+        usernameDisplay.textContent = 'Guest';
+      }
+    }
+    window.addEventListener('click', (e) => {
+      if (e.target === authModal) {
+        authModal.style.display = 'none';
+      }
+    });
     document.querySelectorAll('nav a').forEach(link => {
       link.addEventListener('click', function(e) {
         if(this.hash) {
@@ -698,10 +1130,6 @@ We believe that eating well shouldn’t mean spending hours in the kitchen or se
         }
       });
     });
-
-    // Animate leaves (simple float)
-    // Already handled by CSS keyframes
   </script>
 </body>
 </html>
-
