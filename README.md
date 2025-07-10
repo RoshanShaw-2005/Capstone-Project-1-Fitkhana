@@ -1,7 +1,7 @@
 # FitKhana
 
 FitKhana is a web-based platform that helps users discover and prepare healthier recipes based on their dietary preferences, available ingredients, and time constraints. It’s designed to make clean, mindful eating both accessible and easy to follow — focusing on home-cooked meals rather than packaged solutions.
-
+<img width="1896" height="926" alt="image" src="https://github.com/user-attachments/assets/e99003fa-7b78-4ca8-9601-dd70a30ceb94" />
 ---
 
 ## Key Features
@@ -47,8 +47,6 @@ FitKhana is a web-based platform that helps users discover and prepare healthier
 - Yash Sharma  
 
 ---
-
-<img width="1896" height="926" alt="image" src="https://github.com/user-attachments/assets/e99003fa-7b78-4ca8-9601-dd70a30ceb94" />
 
 ---
 
