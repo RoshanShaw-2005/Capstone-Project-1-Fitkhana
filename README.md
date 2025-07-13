@@ -1,64 +1,99 @@
-# FitKhana
 
-FitKhana is a web-based platform that helps users discover and prepare healthier recipes based on their dietary preferences, available ingredients, and time constraints. It’s designed to make clean, mindful eating both accessible and easy to follow — focusing on home-cooked meals rather than packaged solutions.
-<img width="1896" height="926" alt="image" src="https://github.com/user-attachments/assets/e99003fa-7b78-4ca8-9601-dd70a30ceb94" />
----
+# FitKhana - Healthy Recipe Recommender
 
-## Key Features
+![FitKhana Banner](https://github.com/user-attachments/assets/e99003fa-7b78-4ca8-9601-dd70a30ceb94)
 
-- **Personalized Recipe Suggestions**  
-  Easily filter by diet (Vegetarian, Vegan, Low-Carb), meal type (Breakfast, Lunch, Dinner, Snack), and cooking time. 
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [License](#license)
 
-- **Balanced and Healthy Meals**  
-  Each recipe is curated to meet essential nutritional guidelines while maintaining taste and simplicity.
+## Overview
+FitKhana is a responsive web application that helps users discover and manage healthy recipes tailored to their dietary preferences and cooking constraints. The platform offers personalized recipe recommendations and allows users to create and save their own recipes.
 
-- **Simple User Interface**  
-  Browse through an intuitive layout with clear categories and easy-to-follow recipe details including ingredients, preparation steps, and nutritional info.
+## Features
+- **Smart Recipe Filtering**: Filter by diet type (vegetarian, vegan, low-carb), meal type, and cooking time
+- **Custom Recipe Creation**: User-friendly form to add personal recipes
+- **Recipe Management**: Save, view, and delete recipes in personal collection
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **User Accounts**: Simple authentication system
 
-- **Community Engagement**  
-  Showcasing user experiences, healthy eating tips, and curated meal plans through testimonials and premium content.
+## Screenshots
 
-- **Profile and Subscription Management**  
-  Users can create accounts, log in, and manage subscriptions to access premium features like weekly meal plans and exclusive recipes.
+**Recipe Browser**  
+![Recipe Browser]
+<img width="1920" height="918" alt="image" src="https://github.com/user-attachments/assets/26eabaf5-66ec-4c3b-a376-0f5969deb4b2" />
 
----
+*Browse and filter recipes based on dietary needs*
 
-## Why FitKhana?
+**Recipe Details**  
+![Recipe Details] <img width="1593" height="908" alt="image" src="https://github.com/user-attachments/assets/9e3f033b-b35b-47b6-b0bf-35ce890f8c35" />
 
-- **Customized for Your Preferences** – Recipes tailored to individual tastes and health goals.  
-- **Focused on Nutrition** – All meals meet healthy eating standards.  
-- **Quick, Hassle-Free Recipes** – Ideal for both beginners and busy individuals.  
-- **Constant Variety** – New healthy recipe ideas updated regularly.
+*View complete recipe instructions and ingredients*
 
----
+## Technologies
+- **Frontend**: HTML, CSS, JavaScript
+- **Styling**: Custom CSS with CSS variables
+- **Icons**: Font Awesome
+- **Fonts**: Google Fonts (Montserrat, Nunito)
+- **Storage**: Browser localStorage
 
-## Technologies Used
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/fitkhana.git
+Navigate to project directory:
 
-- HTML  
-- CSS  
-- JavaScript  
-- SQL (for backend data handling)
+bash
 
----
+cd fitkhana
 
-## Contributors
+Open index.html in your preferred browser
 
-- Roshan Shaw  
-- Yash Sharma  
+## Usage
+Browse Recipes:
 
----
+Use the filter options to find suitable recipes
 
----
+Click "View Recipe" for detailed instructions
 
-## How to Use
+## Add Recipes:
 
-1. Clone or download the repository.
-2. Open `fitkhana.html` in a web browser.
-3. Browse recipes, apply filters, and discover healthy meal ideas.
-<img width="1871" height="491" alt="image" src="https://github.com/user-attachments/assets/dfeb1c0f-5aa7-4ccc-bf09-8dc610b7b8ec" />
+Navigate to "My Recipes" section
 
----
+Click "Add New Recipe"
+
+Complete and submit the form
+
+## Manage Account:
+
+Click the profile icon to login/signup
+
+View saved recipes and preferences
+
+## Roadmap
+Implement meal planning functionality
+
+Add nutritional information calculator
+
+Develop grocery list generator
+
+Expand recipe database
+
+Add social sharing features
 
 ## License
+This project is licensed for educational and personal use. Commercial use requires explicit permission. Recipe content and images are provided for demonstration purposes.
 
-This project is open-source and available under the MIT License.
+## Key features of this README.md:
+1. Professional structure with clear sections
+2. Integrated screenshots with descriptive captions
+3. Clean formatting with proper markdown syntax
+4. Complete installation and usage instructions
+5. Future development roadmap
+6. Appropriate licensing information
