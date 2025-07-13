@@ -13,7 +13,6 @@
 - [Usage](#usage)
 - [Roadmap](#roadmap)
 - [License](#license)
-- [Contact](#contact)
 
 ## Overview
 FitKhana is a web-based platform designed for cooking enthusiasts to upload, share, and discover unique home-cooked recipes. It promotes healthy eating and community engagement through structured recipe browsing and a like-based reward system for creators.
